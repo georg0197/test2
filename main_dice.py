@@ -3,12 +3,7 @@ from random import randint
 
 
 def create_dice():
-    """
-    Creates the dice with all the sides drawn in a list.
-    The sides are drawn by the draw_dice function.
-
-    :return: dice list
-    """
+    
     dice = list()
     dice.append(draw_dice('dot0'))  # empty
     dice.append(draw_dice('dot4'))  # center dot --> 1
@@ -21,13 +16,7 @@ def create_dice():
 
 
 def draw_dice(*args):
-    """
-    Creates the individual heads passed in through the 
-    create_dice function.
-
-    :param args: string(s) for certain dots for certain heads
-    :return: c canvas
-    """
+    
     w, h = 250, 250 # sets width and height
     x, y, r = 2, 2, 5 # sets x, y, and radius
     c = tk.Canvas(root, width=w, height=h, bg='white') # creates canvas c
@@ -51,12 +40,7 @@ def draw_dice(*args):
 
 
 def click():
-    """
-    Performs the operation of clicking the button. This will roll through
-    the different dice heads
-
-    :return: None
-    """
+   
     t = 100 # start with a time delay of 100 ms and increase it as the dice rolls
     stop = randint(13, 18) # chooses random number between 13 - 17
     for x in range(stop):
