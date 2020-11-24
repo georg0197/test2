@@ -29,7 +29,7 @@ def draw_dice(*args):
         'dot3': lambda x, y, r: c.create_oval(x, y + 8, x + r, (y + 8) + r, fill='red'),
         'dot4': lambda x, y, r: c.create_oval(x + 8, (y + 8), (x + 8) + r, (y + 8) + r, fill='purple'),
         'dot5': lambda x, y, r: c.create_oval(x + 16, (y + 8), (x + 16) + r, (y + 8) + r, fill='brown'),
-        'dot6': lambda x, y, r: c.create_oval(x, y + 16, x + r, (y + 16) + r, fill='black'),
+        'dot6': lambda x, y, r: c.create_oval(x, y + 16, x + r, (y + 16) + r, fill='pink'),
         'dot9': lambda x, y, r: c.create_oval(x + 16, y + 16, (x + 16) + r, (y + 16) + r, fill='grey')
     }
 
