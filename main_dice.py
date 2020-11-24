@@ -51,7 +51,16 @@ def click():
             break
         root.after(t, dice_list[dice_index].grid_forget()) 
         t += 25
-
+        
+def info():
+    global canvas
+    canvas = tk.Canvas(root)
+    canvas.place(relx=0, rely=0, relwidth=1, relheight=1)
+    label1 = tk.Label(canvas, text="Задание Игра «Кости»", font=('Arial', 14))
+    label1.place(relx=0, rely=.3, relwidth=1, relheight=.2)
+    button = tk.Button(canvas, text='X', command=close_canvas)
+    button.place(relx=.9, rely=0, relwidth=.1, relheight=.1)
+    
 root = tk.Tk()
 root.title("Игра Кости ")
 
