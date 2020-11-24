@@ -1,7 +1,6 @@
 import tkinter as tk
 from random import randint
 
-
 def create_dice():
     
     dice = list()
@@ -14,14 +13,12 @@ def create_dice():
     dice.append(draw_dice('dot1', 'dot2', 'dot3', 'dot5', 'dot6', 'dot9')) 
     return dice
 
-
 def draw_dice(*args):
     
     w, h = 250, 250 
     x, y, r = 2, 2, 5
     c = tk.Canvas(root, width=w, height=h, bg='white') 
 
-    
     dots = {
         'dot0': lambda x, y, r: c,
         'dot1': lambda x, y, r: c.create_oval(x, y, x + r, y + r, fill='black'),
@@ -38,7 +35,6 @@ def draw_dice(*args):
 
     return c
 
-
 def click():
    
     t = 100 
@@ -54,14 +50,10 @@ def click():
         root.after(t, dice_list[dice_index].grid_forget()) 
         t += 25
 
-
-
 root = tk.Tk()
 root.title("Игра Кости ")
 
-
 text = tk.StringVar()
-
 
 text.set("")
 
@@ -69,7 +61,6 @@ text.set("")
 result = tk.Label(root, textvariable=text, fg='black')
 result.grid(row=3, column=0, columnspan=3)
 dice_list = create_dice()
-
 
 dice_list[0].grid(row=1, column=0, columnspan=3)
 button1 = tk.Button(root, text="Бросить кости", command=click)
