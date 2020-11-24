@@ -60,8 +60,8 @@ text = tk.StringVar()
 text.set("")
 
 
-result = tk.Label(root, textvariable=text, fg='black')
-result.grid(row=3, column=0, columnspan=3)
+result = tk.Label(root, textvariable=text, fg='black', font=('Arial', 14))
+result.grid(row=2, column=0, columnspan=2)
 dice_list = create_dice()
 
 dice_list[0].grid(row=1, column=0, columnspan=3)
@@ -71,10 +71,10 @@ button2 = tk.Button(root, text="Покинуть игру", command=root.destroy
 button2.grid(row=2, column=1, pady=3)
 
 menu = tk.Menu(root)
-filemenu = Menu(menu, tearoff=0)
-filemenu.add_command(label='Доп. информация', command=info)
+filemenu = tk.Menu(menu, tearoff=0)
+filemenu.add_command(label='Задание', command=info)
 menu.add_cascade(label='Файл', menu=filemenu)
-menu.add_command(label='Справка', command=f1)
+menu.add_command(label='Авторы', command=f1)
 root.config(menu=menu) 
 
 root.mainloop()
