@@ -16,18 +16,20 @@ def create_dice():
 def draw_dice(*args):
     
     w, h = 250, 250 
-    x, y, r = 2, 2, 5
-    c = tk.Canvas(root, width=w, height=h, bg='white') 
+    x, y, r = 65, 65, 35
+    global c
+    c = tk.Canvas(root, width=w, height=h, bg='white')
+    c.create_rectangle (50, 50, 200, 200)
 
     dots = {
         'dot0': lambda x, y, r: c,
         'dot1': lambda x, y, r: c.create_oval(x, y, x + r, y + r, fill='black'),
-        'dot2': lambda x, y, r: c.create_oval(x + 16, y, (x + 16) + r, y + r, fill='green'),
-        'dot3': lambda x, y, r: c.create_oval(x, y + 8, x + r, (y + 8) + r, fill='red'),
-        'dot4': lambda x, y, r: c.create_oval(x + 8, (y + 8), (x + 8) + r, (y + 8) + r, fill='purple'),
-        'dot5': lambda x, y, r: c.create_oval(x + 16, (y + 8), (x + 16) + r, (y + 8) + r, fill='brown'),
-        'dot6': lambda x, y, r: c.create_oval(x, y + 16, x + r, (y + 16) + r, fill='pink'),
-        'dot9': lambda x, y, r: c.create_oval(x + 16, y + 16, (x + 16) + r, (y + 16) + r, fill='grey')
+        'dot2': lambda x, y, r: c.create_oval(x + 80, y, (x + 80) + r, y + r, fill='green'),
+        'dot3': lambda x, y, r: c.create_oval(x, y + 40, x + r, (y + 40) + r, fill='red'),
+        'dot4': lambda x, y, r: c.create_oval(x + 40, (y + 40), (x + 40) + r, (y + 40) + r, fill='purple'),
+        'dot5': lambda x, y, r: c.create_oval(x + 80, (y + 40), (x + 80) + r, (y + 40) + r, fill='brown'),
+        'dot6': lambda x, y, r: c.create_oval(x, y + 80, x + r, (y + 80) + r, fill='white'),
+        'dot9': lambda x, y, r: c.create_oval(x + 80, y + 80, (x + 80) + r, (y + 80) + r, fill='yellow')
     }
 
     for arg in args:
