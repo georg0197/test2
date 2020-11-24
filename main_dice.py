@@ -61,6 +61,15 @@ def info():
     button = tk.Button(canvas, text='X', command=close_canvas)
     button.place(relx=.9, rely=0, relwidth=.1, relheight=.1)
     
+def f1():
+    global canvas
+    canvas = tk.Canvas(root)
+    canvas.place(relx=0, rely=0, relwidth=1, relheight=1)
+    label12 = tk.Label(canvas, text="Задание выполнили студенты группы ИСМ 20-2 Сагандыкова Б.Г. Яковенко Г.А. ", font=('Arial', 14), wraplength = 180 )
+    label12.place(relx=0, rely=.2, relwidth=1, relheight=.6)
+    button = tk.Button(canvas, text='X', command=close_canvas)
+    button.place(relx=.9, rely=0, relwidth=.1, relheight=.1)
+    
 root = tk.Tk()
 root.title("Игра Кости ")
 
