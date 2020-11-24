@@ -70,6 +70,9 @@ def f1():
     button = tk.Button(canvas, text='X', command=close_canvas)
     button.place(relx=.9, rely=0, relwidth=.1, relheight=.1)
     
+def close_canvas():
+    canvas.destroy()    
+    
 root = tk.Tk()
 root.title("Игра Кости ")
 
